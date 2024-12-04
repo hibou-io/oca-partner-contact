@@ -16,7 +16,7 @@ class ExceptionRule(models.Model):
 class ResPartner(models.Model):
     _inherit = ["res.partner", "base.exception"]
     _name = "res.partner"
-    _order = "main_exception_id asc, display_name"
+    _order = "main_exception_id ASC, complete_name ASC, id DESC"
 
     @api.model
     def _reverse_field(self):
